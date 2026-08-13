@@ -9,7 +9,11 @@
     "webTests": "npx playwright test --grep @Web",
     "apiTests": "npx playwright test --grep @API",
     "safariNewConfig": "npx playwright test test --config playwright.config1.js --project=safari",
-    "CucumberRegression" : "npx cucumber-js --tags '@Regression' --retry 1 --exit --format html: cucumber-report.html"
+    "CucumberRegression" : "npx cucumber-js --tags '@Regression' --retry 1 --exit --format html: cucumber-report.html",
+    "ClientAppLoginE2E": "npx playwright test tests/ClientAppPO.spec.js --reporter=line,allure-playwright",
+    "install:browsers": "npx playwright install",
+    "report:allure:generate": "allure generate ./allure-results --clean -o allure-report",
+    "report:allure:open": "allure open ./allure-report"
   },
   "keywords": [],
   "author": "",
